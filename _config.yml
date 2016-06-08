@@ -6,13 +6,13 @@
 title: waterystone
 subtitle: you can NEVER be too careful~
 description:
-author: yunjie.du
+author: waterystone
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://waterystone.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -28,7 +28,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-dream
+theme: maupassant
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,3 +71,20 @@ deploy:
   type: git
   repo: https://github.com/waterystone/waterystone.github.io.git
   branch: master
+  
+  
+# Extensions
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+#sitemap
+sitemap:
+  path: sitemap.xml
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
